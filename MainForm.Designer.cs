@@ -28,21 +28,27 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             System.Windows.Forms.Label label1;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.actionComboBox = new System.Windows.Forms.ComboBox();
             this.okButton = new System.Windows.Forms.Button();
             this.cancelButton = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.aboutButton = new System.Windows.Forms.Button();
             label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
+            // label1
+            // 
+            resources.ApplyResources(label1, "label1");
+            label1.Name = "label1";
+            // 
             // actionComboBox
             // 
+            resources.ApplyResources(this.actionComboBox, "actionComboBox");
             this.actionComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.actionComboBox.FormattingEnabled = true;
-            resources.ApplyResources(this.actionComboBox, "actionComboBox");
             this.actionComboBox.Name = "actionComboBox";
             // 
             // okButton
@@ -61,15 +67,17 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::RemoteDesktopShutdown.Properties.Resources.Computer;
             resources.ApplyResources(this.pictureBox1, "pictureBox1");
+            this.pictureBox1.Image = global::RemoteDesktopShutdown.Properties.Resources.Computer;
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.TabStop = false;
             // 
-            // label1
+            // aboutButton
             // 
-            resources.ApplyResources(label1, "label1");
-            label1.Name = "label1";
+            resources.ApplyResources(this.aboutButton, "aboutButton");
+            this.aboutButton.Name = "aboutButton";
+            this.aboutButton.UseVisualStyleBackColor = true;
+            this.aboutButton.Click += new System.EventHandler(this.aboutButton_Click);
             // 
             // MainForm
             // 
@@ -77,6 +85,7 @@
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.cancelButton;
+            this.Controls.Add(this.aboutButton);
             this.Controls.Add(label1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.cancelButton);
@@ -98,5 +107,6 @@
         private System.Windows.Forms.Button okButton;
         private System.Windows.Forms.Button cancelButton;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button aboutButton;
     }
 }

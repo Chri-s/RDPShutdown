@@ -46,5 +46,13 @@ namespace RemoteDesktopShutdown
             if (actionComboBox.SelectedItem != null)
                 DialogResult = DialogResult.OK;
         }
+
+        private void aboutButton_Click(object sender, EventArgs e)
+        {
+            using (AboutForm form = new AboutForm())
+            {
+                form.ShowDialog(this);
+            }
+        }
     }
 }
